@@ -37,5 +37,53 @@ public class Rettangolo {
 		 int area = a * b;
 		 return area;
 	 }
+	 
+	//METODO PER DISEGNARE IL RETTANGOLO
+		 void rettangoloDisegno (int a, int b) {
+			 
+			 //disegno base superiore
+			for (int i = 0; i < a; i++){
+			    System.out.print("O ");
+	
+			}			
+			System.out.println("");
+			
+			
+			//disegno altezza 
+			for (int i = 0; i < b-2; i++){	
+				
+			    //per ogni iterazione controlla 
+			    for (int j = 0; j < a; j++) {
+                   
+			       //SE j è uguale a 0	stampa O + spazio
+                   if (j == 0) {
+                	   
+                      System.out.print("O "); 
+                   
+                    //ALTRIMENTI SE j è uguale ad a-1	stampa O + spazio  
+                   } else if (j == a-1) {
+                	   
+                      System.out.println("O ");  
+                   
+                   //ALTRIMENTI stampa due spazi 
+                   }else {
+                	   
+                	  System.out.print("  ");
+                   }
+			    }
+			   
+			} 
+			
+			
+			//disegno base inferionre
+			for (int i = 0; i < a; i++){
+			    System.out.print("O ");
+	
+			}
+			
+			
+			
+		 }
 
+//CHIUSURA  CLASSE RETTANGOLO
 }

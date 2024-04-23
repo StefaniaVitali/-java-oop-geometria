@@ -27,17 +27,22 @@ public class Main {
 		//istanziare il rettangolo nuovo con il costruttore
 		Rettangolo mioRettangolo = new Rettangolo (num1,num2);
 		
+		System.out.println("Base: " + num1);
+		System.out.println("Altezza: " + num2);
+		
 		//richiamare i metodi di calcolo di base e area e salvarli in una variabile
 		int mioRettangoloPerimetro = mioRettangolo.calcolaPerimetro(num1,num2);
-		System.out.println("Il perimetro del mio rettangolo è " + mioRettangoloPerimetro);
+		System.out.println("Perimetro: " + mioRettangoloPerimetro);
 		
 		int mioRettangoloArea = mioRettangolo.calcolaArea(num1,num2);
-		System.out.println("L'area del mio rettangolo è " + mioRettangoloArea);
+		System.out.println("Area: " + mioRettangoloArea);
 		
+		//BONUS DISEGNARE IL RETTANGOLO
+         mioRettangolo.rettangoloDisegno(num1,num2);
+	
 		
 		//Chiudere il canale di collegamento con la tastiera 
 	     input.close();	
-		
 	}
 	
 
