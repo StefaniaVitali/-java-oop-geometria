@@ -12,12 +12,13 @@ in console il rettangolo con le sue dimensioni, come nell’immagine allegata
 
 package org.lessons.java.geometria;
 
-
+//CLASSE RETTANGOLO CON DEFINIZIONE DELLE SUE PROPRIETA'
 public class Rettangolo {
 	
 	 public int base;
 	 public int altezza;
-	 
+
+	//COSTRUTTORE CLASSE RETTANGOLO CON I PARAMETRI NECESSARI PER COSTRUIRLO	 
 	 public Rettangolo(int base, int altezza){
 		 
 		 this.base = base;
@@ -25,11 +26,13 @@ public class Rettangolo {
 		 
 	 }
 	 
+	//METODO PER CALCOLARE IL PERIMETRO -> RITORNA UN INT 
 	 int calcolaPerimetro (int a, int b) {
 		 int perimetro = 2*a + 2*b;
 		 return perimetro;
 	 }
 	 
+	//METODO PER CALCOLARE L'AREA -> RITORNA UN INT
 	 int calcolaArea (int a, int b) {
 		 int area = a * b;
 		 return area;
