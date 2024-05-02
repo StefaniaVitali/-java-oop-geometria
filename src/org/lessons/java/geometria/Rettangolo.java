@@ -15,8 +15,28 @@ package org.lessons.java.geometria;
 //CLASSE RETTANGOLO CON DEFINIZIONE DELLE SUE PROPRIETA'
 public class Rettangolo {
 	
-	 public int base;
-	 public int altezza;
+	 private int base;
+	 private int altezza;
+	 
+	 
+	//GETTER E SETTER
+	 
+	public int getBase() {
+		return base;
+	}
+
+	public void setBase(int base) {
+		this.base = base;
+	}
+
+	public int getAltezza() {
+		return altezza;
+	}
+
+	public void setAltezza(int altezza) {
+		this.altezza = altezza;
+	}	 
+	 
 
 	//COSTRUTTORE CLASSE RETTANGOLO CON I PARAMETRI NECESSARI PER COSTRUIRLO	 
 	 public Rettangolo(int base, int altezza){
@@ -25,7 +45,8 @@ public class Rettangolo {
 		 this.altezza = altezza;		 
 		 
 	 }
-	 
+
+
 	//METODO PER CALCOLARE IL PERIMETRO -> RITORNA UN INT 
 	 int calcolaPerimetro (int a, int b) {
 		 int perimetro = 2*a + 2*b;
