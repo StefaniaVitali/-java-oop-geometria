@@ -14,13 +14,20 @@ package org.lessons.java.geometria;
 
 //CLASSE RETTANGOLO CON DEFINIZIONE DELLE SUE PROPRIETA'
 public class Rettangolo {
-	
-	 private int base;
-	 private int altezza;
-	 
-	 
-	//GETTER E SETTER
-	 
+
+	private int base;
+	private int altezza;
+
+	// COSTRUTTORE CLASSE RETTANGOLO CON I PARAMETRI NECESSARI PER COSTRUIRLO
+	public Rettangolo(int base, int altezza) {
+
+		this.base = base;
+		this.altezza = altezza;
+
+	}
+
+	// GETTER E SETTER
+
 	public int getBase() {
 		return base;
 	}
@@ -35,76 +42,62 @@ public class Rettangolo {
 
 	public void setAltezza(int altezza) {
 		this.altezza = altezza;
-	}	 
-	 
+	}
 
-	//COSTRUTTORE CLASSE RETTANGOLO CON I PARAMETRI NECESSARI PER COSTRUIRLO	 
-	 public Rettangolo(int base, int altezza){
-		 
-		 this.base = base;
-		 this.altezza = altezza;		 
-		 
-	 }
+	// METODO PER CALCOLARE IL PERIMETRO -> RITORNA UN INT
+	public int calcolaPerimetro(int a, int b) {
+		int perimetro = 2 * a + 2 * b;
+		return perimetro;
+	}
 
+	// METODO PER CALCOLARE L'AREA -> RITORNA UN INT
+	public int calcolaArea(int a, int b) {
+		int area = a * b;
+		return area;
+	}
 
-	//METODO PER CALCOLARE IL PERIMETRO -> RITORNA UN INT 
-	 int calcolaPerimetro (int a, int b) {
-		 int perimetro = 2*a + 2*b;
-		 return perimetro;
-	 }
-	 
-	//METODO PER CALCOLARE L'AREA -> RITORNA UN INT
-	 int calcolaArea (int a, int b) {
-		 int area = a * b;
-		 return area;
-	 }
-	 
-	//METODO PER DISEGNARE IL RETTANGOLO
-		 void rettangoloDisegno (int a, int b) {
-			 
-			 //disegno base superiore
-			for (int i = 0; i < a; i++){
-			    System.out.print("O ");
-	
-			}			
-			System.out.println("");
-			
-			
-			//disegno altezza 
-			for (int i = 0; i < b-2; i++){	
-				
-			    //per ogni iterazione controlla 
-			    for (int j = 0; j < a; j++) {
-                   
-			       //SE j è uguale a 0	stampa O + spazio
-                   if (j == 0) {
-                	   
-                      System.out.print("O "); 
-                   
-                    //ALTRIMENTI SE j è uguale ad a-1	stampa O + spazio  
-                   } else if (j == a-1) {
-                	   
-                      System.out.println("O ");  
-                   
-                   //ALTRIMENTI stampa due spazi 
-                   }else {
-                	   
-                	  System.out.print("  ");
-                   }
-			    }
-			   
-			} 
-			
-			
-			//disegno base inferionre
-			for (int i = 0; i < a; i++){
-			    System.out.print("O ");
-	
+	// METODO PER DISEGNARE IL RETTANGOLO
+	public void rettangoloDisegno(int a, int b) {
+
+		// disegno base superiore
+		for (int i = 0; i < a; i++) {
+			System.out.print("O ");
+
+		}
+		System.out.println("");
+
+		// disegno altezza
+		for (int i = 0; i < b - 2; i++) {
+
+			// per ogni iterazione controlla
+			for (int j = 0; j < a; j++) {
+
+				// SE j è uguale a 0 stampa O + spazio
+				if (j == 0) {
+
+					System.out.print("O ");
+
+					// ALTRIMENTI SE j è uguale ad a-1 stampa O + spazio
+				} else if (j == a - 1) {
+
+					System.out.println("O ");
+
+					// ALTRIMENTI stampa due spazi
+				} else {
+
+					System.out.print("  ");
+				}
 			}
-			
-			
-			
-		 }
+
+		}
+
+		// disegno base inferionre
+		for (int i = 0; i < a; i++) {
+			System.out.print("O ");
+
+		}
+
+	}
 
 //CHIUSURA  CLASSE RETTANGOLO
 }
